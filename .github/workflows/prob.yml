@@ -3,7 +3,7 @@ name: Convert Prob Table
 on:
   push:
     paths:
-      - "prob_dev.txt"
+      - "docs/prob_dev.txt"
   workflow_dispatch:
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add prob.txt
+          git add docs/prob.txt
 
           git diff --cached --quiet || git commit -m "auto: update prob.txt"
           git push
