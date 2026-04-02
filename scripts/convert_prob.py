@@ -14,9 +14,9 @@ def convert_rates(txt: str) -> str:
 
   while i < len(lines) and not lines[i].startswith("["):
     parts = lines[i].split()
-    stage = int(parts[0])
+    enchant = int(parts[0])
     for g, v in zip(headers, parts[1:]):
-      success[g][stage] = float(v)
+      success[g][enchant] = float(v)
     i += 1
 
   assert lines[i] == "[Destroy Rate]"
@@ -32,13 +32,13 @@ def convert_rates(txt: str) -> str:
 
   for g in headers:
     out.append(f"[{g}]")
-    for stage in sorted(success[g].keys()):
-      s = success[g][stage]
+    for enchant in sorted(success[g].keys()):
+      s = success[g][enchant]
       d = destroy.get(g, 0.0)
       m = max(0, 100 - s - d)
 
       out.append(
-        f"Stage {stage} -> {stage+1}: "
+        f"Enchant {enchant} -> {enchant+1}: "
         f"Success {s:g}%, Maintain {m:g}%, Destroy {d:g}%"
       )
     out.append("")
