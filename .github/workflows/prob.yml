@@ -1,0 +1,32 @@
+name: Convert Prob Table
+
+on:
+  push:
+    paths:
+      - "prob_dev.txt"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run converter
+        run: python scripts/convert_prob.py
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add prob.txt
+
+          git diff --cached --quiet || git commit -m "auto: update prob.txt"
+          git push
