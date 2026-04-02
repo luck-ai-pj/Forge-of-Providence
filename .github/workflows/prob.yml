@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "prob_dev.txt"
+  workflow_dispatch:
 
 permissions:
   contents: write
