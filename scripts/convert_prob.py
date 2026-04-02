@@ -49,7 +49,7 @@ def convert_rates(txt: str) -> str:
 # ===== 실행 =====
 root = pathlib.Path(__file__).resolve().parents[1]
 
-src = root / "prob_dev.txt"
-dst = root / "prob.txt"
+src = root / "docs/prob_dev.txt"
+dst = root / "docs/prob.txt"
 
 dst.write_text(convert_rates(src.read_text(encoding="utf-8")), encoding="utf-8")
