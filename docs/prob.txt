@@ -4,7 +4,7 @@ Enchant 1 -> 2: Success 80%, Maintain 20%, Destroy 0%
 Enchant 2 -> 3: Success 60%, Maintain 40%, Destroy 0%
 Enchant 3 -> 4: Success 40%, Maintain 60%, Destroy 0%
 Enchant 4 -> 5: Success 20%, Maintain 80%, Destroy 0%
-Enchant 5 -> 6: Success 10%, Maintain 90%, Destroy 0%
+Transcend: Success 10%, Maintain 90%, Destroy 0%
 
 [Magic]
 Enchant 0 -> 1: Success 80%, Maintain 18%, Destroy 2%
@@ -12,7 +12,7 @@ Enchant 1 -> 2: Success 60%, Maintain 38%, Destroy 2%
 Enchant 2 -> 3: Success 40%, Maintain 58%, Destroy 2%
 Enchant 3 -> 4: Success 20%, Maintain 78%, Destroy 2%
 Enchant 4 -> 5: Success 10%, Maintain 88%, Destroy 2%
-Enchant 5 -> 6: Success 5%, Maintain 93%, Destroy 2%
+Transcend: Success 5%, Maintain 93%, Destroy 2%
 
 [Rare]
 Enchant 0 -> 1: Success 60%, Maintain 36%, Destroy 4%
@@ -20,7 +20,7 @@ Enchant 1 -> 2: Success 40%, Maintain 56%, Destroy 4%
 Enchant 2 -> 3: Success 20%, Maintain 76%, Destroy 4%
 Enchant 3 -> 4: Success 10%, Maintain 86%, Destroy 4%
 Enchant 4 -> 5: Success 5%, Maintain 91%, Destroy 4%
-Enchant 5 -> 6: Success 2%, Maintain 94%, Destroy 4%
+Transcend: Success 2%, Maintain 94%, Destroy 4%
 
 [Legendary]
 Enchant 0 -> 1: Success 40%, Maintain 53%, Destroy 7%
@@ -28,7 +28,7 @@ Enchant 1 -> 2: Success 20%, Maintain 73%, Destroy 7%
 Enchant 2 -> 3: Success 10%, Maintain 83%, Destroy 7%
 Enchant 3 -> 4: Success 5%, Maintain 88%, Destroy 7%
 Enchant 4 -> 5: Success 2%, Maintain 91%, Destroy 7%
-Enchant 5 -> 6: Success 1%, Maintain 92%, Destroy 7%
+Transcend: Success 1%, Maintain 92%, Destroy 7%
 
 [Mythic]
 Enchant 0 -> 1: Success 20%, Maintain 70%, Destroy 10%
@@ -36,4 +36,3 @@ Enchant 1 -> 2: Success 10%, Maintain 80%, Destroy 10%
 Enchant 2 -> 3: Success 5%, Maintain 85%, Destroy 10%
 Enchant 3 -> 4: Success 2%, Maintain 88%, Destroy 10%
 Enchant 4 -> 5: Success 1%, Maintain 89%, Destroy 10%
-Enchant 5 -> 6: Success 0%, Maintain 90%, Destroy 10%
