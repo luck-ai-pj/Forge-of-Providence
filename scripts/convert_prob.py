@@ -32,15 +32,28 @@ def convert_rates(txt: str) -> str:
 
   for g in headers:
     out.append(f"[{g}]")
+
     for enchant in sorted(success[g].keys()):
       s = success[g][enchant]
       d = destroy.get(g, 0.0)
       m = max(0, 100 - s - d)
 
-      out.append(
-        f"Enchant {enchant} -> {enchant+1}: "
-        f"Success {s:g}%, Maintain {m:g}%, Destroy {d:g}%"
-      )
+      # 🔥 Mythic + Enchant 5 -> 6 제거
+      if g.lower() == "mythic" and enchant == 5:
+        continue
+
+      # 🔥 Enchant 5 -> 6 → Transcend
+      if enchant == 5:
+        out.append(
+          f"Transcend: "
+          f"Success {s:g}%, Maintain {m:g}%, Destroy {d:g}%"
+        )
+      else:
+        out.append(
+          f"Enchant {enchant} -> {enchant+1}: "
+          f"Success {s:g}%, Maintain {m:g}%, Destroy {d:g}%"
+        )
+
     out.append("")
 
   return "\n".join(out)
